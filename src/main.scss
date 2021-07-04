@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+#main {
+  width: 600px;
+  height: 400px;
+  background: whitesmoke;
+  display: grid;
+  grid-template:
+    "session space break" 1fr
+    "time time time" 1.5fr
+    "start_stop title reset" 1fr
+    /1fr 1fr 1fr;
+  place-items: center;
+}
+
+#timer-label {
+  grid-area: title;
+}
+
+#time-left {
+  grid-area: time;
+  color: black;
+  font-size: 85px;
+}
+
+@each $button in reset, start_stop {
+  ##{$button} {
+    grid-area: $button;
+    width: 80%;
+    height: 50%;
+    background: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

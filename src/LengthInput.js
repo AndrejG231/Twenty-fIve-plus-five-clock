@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-import "./lengthInput.css";
+import "./lengthInput.scss";
 
 class LengthInput extends PureComponent {
   constructor(props) {
@@ -16,7 +16,7 @@ class LengthInput extends PureComponent {
     const setValue = this.props.setValue;
 
     return (
-      <div className="inputContainer">
+      <div id={`${type}-inputContainer`}>
         <label id={`${type}-label`}>{type}</label>
         <div className="inputSelectors">
           <button id={`${type}-increment`} onClick={() => setValue(value + 60)}>

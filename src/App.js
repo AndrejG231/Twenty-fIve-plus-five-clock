@@ -2,7 +2,7 @@ import React, { Component, createRef } from "react";
 
 import LengthInput from "./LengthInput";
 
-import "./main.css";
+import "./main.scss";
 
 class App extends Component {
   constructor(props) {
@@ -89,7 +89,7 @@ class App extends Component {
     const seconds = runningTime % 60;
 
     return (
-      <div>
+      <div id="main">
         <audio
           id="beep"
           preload="auto"
