@@ -7,7 +7,7 @@ module.exports = {
     extensions: [".jsx", ".js"],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
   },
   devServer: {
     port: 3000,
